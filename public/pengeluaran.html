@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pengeluaran Rumah Tangga</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <h1>Pengeluaran Rumah Tangga</h1>
+
+    <!-- Form Tambah Pengeluaran -->
+    <section>
+      <form id="formTambah">
+        <label>Tanggal</label>
+        <input type="date" name="tanggal" required />
+
+        <label>Kategori</label>
+        <select name="kategori" required>
+          <option value="">-- Pilih Kategori --</option>
+          <option value="Kuliah">Kuliah</option>
+          <option value="Sekolah">Sekolah</option>
+          <option value="Infak">Infak</option>
+          <option value="Zakat">Zakat</option>
+          <option value="Air">Air</option>
+          <option value="Listrik">Listrik</option>
+          <option value="BPJS">BPJS</option>
+          <option value="Kuota/Pulsa">Kuota/Pulsa</option>
+          <option value="Belanja Bulanan">Belanja Bulanan</option>
+          <option value="Bensin">Bensin</option>
+          <option value="Obat/Herbal">Obat/Herbal</option>
+          <option value="Keluarga">Keluarga</option>
+          <option value="Abi">Abi</option>
+          <option value="Umma">Umma</option>
+          <option value="Anak">Anak</option>
+          <option value="Makan/Minum">Makan/Minum</option>
+          <option value="Jajan">Jajan</option>
+          <option value="Lainnya">Lainnya</option>
+        </select>
+
+        <label>Jumlah</label>
+        <input type="number" name="jumlah" required />
+
+        <button type="submit">Simpan</button>
+      </form>
+    </section>
+
+    <hr />
+
+    <!-- Daftar Pengeluaran -->
+    <section>
+      <h2>Daftar Pengeluaran</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Tanggal</th>
+            <th>Kategori</th>
+            <th>Jumlah</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="daftarPengeluaran">
+          <!-- Data pengeluaran akan diisi JS -->
+        </tbody>
+      </table>
+    </section>
+
+    <hr />
+
+    <!-- Grafik Pengeluaran -->
+    <section>
+      <h2>Grafik Pengeluaran per Kategori</h2>
+      <canvas id="grafikPengeluaran" height="120"></canvas>
+    </section>
+
+    <br />
+    <a href="index.html">Kembali ke Dashboard</a>
+
+    <!-- Modal Edit -->
+    <div id="modalEdit" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h3>Edit Pengeluaran</h3>
+        <form id="formEdit">
+          <input type="hidden" name="id" />
+
+          <label>Kategori</label>
+          <select name="kategori" required>
+            <option value="">-- Pilih Kategori --</option>
+            <option value="Kuliah">Kuliah</option>
+            <option value="Sekolah">Sekolah</option>
+            <option value="Infak">Infak</option>
+            <option value="Zakat">Zakat</option>
+            <option value="Air">Air</option>
+            <option value="Listrik">Listrik</option>
+            <option value="BPJS">BPJS</option>
+            <option value="Kuota/Pulsa">Kuota/Pulsa</option>
+            <option value="Belanja Bulanan">Belanja Bulanan</option>
+            <option value="Bensin">Bensin</option>
+            <option value="Obat/Herbal">Obat/Herbal</option>
+            <option value="Keluarga">Keluarga</option>
+            <option value="Abi">Abi</option>
+            <option value="Umma">Umma</option>
+            <option value="Anak">Anak</option>
+            <option value="Makan/Minum">Makan/Minum</option>
+            <option value="Jajan">Jajan</option>
+            <option value="Lainnya">Lainnya</option>
+          </select>
+
+          <label>Jumlah</label>
+          <input type="number" name="jumlah" required />
+
+          <button type="submit">Simpan Perubahan</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="pengeluaran.js"></script>
+  </body>
+</html>
