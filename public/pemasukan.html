@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pemasukan</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Pemasukan</h1>
+
+    <form id="formTambah">
+      <label>Tanggal</label>
+      <input type="date" name="tanggal" required />
+      <label>Kategori</label>
+      <input type="text" name="kategori" required />
+      <label>Jumlah</label>
+      <input type="number" name="jumlah" required />
+      <button type="submit">Simpan</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Tanggal</th>
+          <th>Kategori</th>
+          <th>Jumlah</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody id="daftarPemasukan"></tbody>
+    </table>
+
+    <div class="modal" id="modalEdit">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <form id="formEdit">
+          <input type="hidden" name="id" />
+          <label>Kategori</label>
+          <input type="text" name="kategori" required />
+          <label>Jumlah</label>
+          <input type="number" name="jumlah" required />
+          <button type="submit">Simpan Perubahan</button>
+        </form>
+      </div>
+    </div>
+
+    <br /><br />
+    <a href="index.html">Kembali ke Dashboard</a>
+
+    <script src="pemasukan.js"></script>
+  </body>
+</html>

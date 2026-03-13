@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Keuangan</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Dashboard Keuangan</h1>
+    </header>
+    <br />
+
+    <!-- Ringkasan -->
+    <section class="cards">
+      <div class="card">
+        <h3>Total Pemasukan</h3>
+        <p id="totalPemasukan">-</p>
+      </div>
+      <div class="card">
+        <h3>Total Pengeluaran</h3>
+        <p id="totalPengeluaran">-</p>
+      </div>
+      <div class="card">
+        <h3>Saldo</h3>
+        <p id="saldo">-</p>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Grafik -->
+    <section>
+      <h2>Grafik Pemasukan & Pengeluaran</h2>
+      <canvas id="grafikDashboard" height="150"></canvas>
+    </section>
+
+    <hr />
+
+    <!-- Menu -->
+    <section>
+      <h2>Menu Halaman</h2>
+      <ul>
+        <li><a href="pemasukan.html">Pemasukan</a></li>
+        <li><a href="pengeluaran.html">Pengeluaran</a></li>
+        <li><a href="transaksi.html">Riwayat Transaksi</a></li>
+      </ul>
+    </section>
+    <br />
+    <button id="logout">Logout</button>
+
+    <script src="dashboard.js" defer></script>
+  </body>
+</html>
